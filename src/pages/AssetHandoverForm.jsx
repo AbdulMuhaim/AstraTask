@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import html2pdf from "html2pdf.js";
 import logo from "../assets/logo.jpg";
 
+
 const AssetHandoverForm = () => {
   const location = useLocation();
   const { data } = location.state || {};
@@ -21,21 +22,23 @@ const AssetHandoverForm = () => {
 
   const printForm = () => {
     window.print();
-  }
-
+  };
 
   return (
     <div>
       {/* Printable Content */}
-      <div id="printableContent" className="max-w-4xl mx-auto p-6 bg-white">
+      <div
+        id="printable-content"
+        className="max-w-4xl border mt-2 mx-auto p-6 bg-white"
+      >
         {/* Header */}
-        <div className="border border-gray-300 p-4 mb-6 flex justify-between items-center">
+        <div className="border-2 border-gray-300  p-4 mb-6 flex justify-between items-center">
           <div>
             <h2 className="text-lg">Arab Supply & Trading Co.</h2>
             <p className="text-sm">Construction Branch</p>
           </div>
           <div>
-            <img src={logo} alt="" className="h-10 w-10" />
+            <img src={logo} alt="" className="h-10 w-12" />
           </div>
           <div className="text-right">
             <p className="text-lg">الشركة العربية للتموين والتجارة</p>
@@ -169,16 +172,16 @@ const AssetHandoverForm = () => {
       </div>
 
       {/* Print Button */}
-      <div className="text-center my-6 flex justify-end mr-10 gap-5">
+      <div className="text-center my-6 flex justify-center gap-5">
         <button
           onClick={downloadForm}
-          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+          className="px-4 pdf-button py-2 bg-green-500 text-white rounded hover:bg-green-600"
         >
           Download
         </button>
         <button
           onClick={printForm}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className="px-4 py-2 pdf-button bg-blue-500 text-white rounded hover:bg-blue-600"
         >
           Print
         </button>

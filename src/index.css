@@ -2,3 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base { img { display: initial; } }
+
+/* @media print {
+    .pdf-button {
+      display: none !important;
+    }
+  } */
+
+
+@media print {
+  body * {
+    visibility: hidden; /* Hide everything */
+  }
+
+  #printable-content, #printable-content * {
+    visibility: visible; /* Only show the printable content */
+  }
+
+  #printable-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* Optional: Adjust margins and other styles for printing */
+  @page {
+    margin: 1cm;
+  }
+}

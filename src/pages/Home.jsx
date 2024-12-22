@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {firestore} from "../firebase";
 import { addDoc,collection } from "firebase/firestore";
 import { toast, ToastContainer } from 'react-toastify';
+import { notification } from "antd";
 
 const Home = () => {
 
@@ -58,7 +59,11 @@ const Home = () => {
     try {      
         addDoc(ref, formData);
         navigate("/form", { state: { data: formData } });
-        toast("Form successfully submitted!");
+        notification.success({
+          message: "Success",
+          description: "Form successfully submitted!",
+          duration: 2, // Time in seconds the message is visible
+        });
     } catch (error) {
       console.error("Error uploading or saving the form:", error);
       alert("An error occurred while submitting the form.");

@@ -12,6 +12,7 @@
   "dependencies": {
     "@ag-media/react-pdf-table": "^2.0.0",
     "@react-pdf/renderer": "^4.1.5",
+    "antd": "^5.22.5",
     "axios": "^1.7.9",
     "firebase": "^11.1.0",
     "html2pdf.js": "^0.10.2",
