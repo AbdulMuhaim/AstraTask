@@ -179,7 +179,7 @@ const AssetHandoverForm = () => {
           onClick={downloadForm}
           className="px-4 pdf-button py-2 bg-green-500 text-white rounded hover:bg-green-600"
         >
-          Download & Print
+          Download
         </button>
         <button
           onClick={printForm}
