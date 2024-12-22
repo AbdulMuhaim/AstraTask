@@ -29,7 +29,7 @@ const AssetHandoverTable = () => {
   return (
     <div className="container mx-auto px-4 py-6">
       <h1 className="text-3xl font-bold mb-4 text-center uppercase">
-        Asset Handover Table
+        Asset Handover List
       </h1>
       <div className="overflow-x-auto">
         <table className="table-auto w-full border-collapse border border-gray-200 rounded-lg">

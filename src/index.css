@@ -31,3 +31,10 @@
     margin: 1cm;
   }
 }
+
+
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+}
