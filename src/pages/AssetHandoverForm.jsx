@@ -8,7 +8,6 @@ const AssetHandoverForm = () => {
   const { data } = location.state || {};
 
   const downloadForm = () => {
-    alert("hiii")
     const element = document.querySelector("#printable-content");
     html2pdf(element)
       .from(element)
