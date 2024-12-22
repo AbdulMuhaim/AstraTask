@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import html2pdf from "html2pdf.js";
 import logo from "../assets/logo.jpg";
+import Navbar from "./Header";
 
 
 const AssetHandoverForm = () => {
@@ -26,6 +27,7 @@ const AssetHandoverForm = () => {
 
   return (
     <div>
+      <Navbar/>
       {/* Printable Content */}
       <div
         id="printable-content"
@@ -177,7 +179,7 @@ const AssetHandoverForm = () => {
           onClick={downloadForm}
           className="px-4 pdf-button py-2 bg-green-500 text-white rounded hover:bg-green-600"
         >
-          Download
+          Download & Print
         </button>
         <button
           onClick={printForm}

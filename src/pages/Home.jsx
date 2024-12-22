@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {firestore} from "../firebase";
 import { addDoc,collection } from "firebase/firestore";
-import { toast, ToastContainer } from 'react-toastify';
 import { notification } from "antd";
+import Navbar from "./Header";
 
 const Home = () => {
 
@@ -71,8 +71,9 @@ const Home = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="p-6 bg-gray-100 min-h-screen flex items-center justify-center">
-      <ToastContainer />
       <form
         className="bg-white p-8 rounded shadow-md w-full max-w-2xl"
         onSubmit={handleSubmit}
@@ -184,6 +185,7 @@ const Home = () => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 

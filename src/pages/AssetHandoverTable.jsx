@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { firestore } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Header";
 
 const AssetHandoverTable = () => {
   const [data, setData] = useState([]);
@@ -27,6 +28,8 @@ const AssetHandoverTable = () => {
   }, []);
 
   return (
+    <>
+    <Navbar/>
     <div className="container mx-auto px-4 py-6">
       <h1 className="text-3xl font-bold mb-4 text-center uppercase">
         Asset Handover List
@@ -74,6 +77,7 @@ const AssetHandoverTable = () => {
         </table>
       </div>
     </div>
+    </>
   );
 };
 
