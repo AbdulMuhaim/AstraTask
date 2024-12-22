@@ -1,25 +1,29 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
+
   return (
     <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="text-white font-semibold text-xl">
-          <a href="/">Astro Industries</a>
+          <p>Astro Industries</p>
         </div>
 
         {/* Navigation Links */}
         <div className="flex space-x-8">
-          <a href="/" className="text-white hover:text-gray-300">
+          <p onClick={()=>navigate('/')} className="text-white hover:text-gray-300 cursor-pointer">
             Home
-          </a>
-          <a href="/form" className="text-white hover:text-gray-300">
+          </p>
+          <p onClick={()=>navigate('/form')} className="text-white hover:text-gray-300 cursor-pointer">
             Asset Handover Form
-          </a>
-          <a href="/list" className="text-white hover:text-gray-300">
+          </p>
+          <p onClick={()=>navigate('/list')} className="text-white hover:text-gray-300 cursor-pointer">
             Asset Handover List
-          </a>
+          </p>
         </div>
       </div>
     </nav>
