@@ -2,11 +2,18 @@ import { useLocation } from "react-router-dom";
 import html2pdf from "html2pdf.js";
 import logo from "../assets/logo.jpg";
 import Navbar from "./Header";
+// import {useReactToPrint} from "react-to-print";
+// import { useRef } from "react";
 
 
 const AssetHandoverForm = () => {
   const location = useLocation();
   const { data } = location.state || {};
+
+//   const componentRef = useRef();
+//   const handlePrint =   useReactToPrint({
+//     content: () => componentRef.current,
+// })
 
   const downloadForm = () => {
     const element = document.querySelector("#printable-content");
@@ -31,6 +38,7 @@ const AssetHandoverForm = () => {
       {/* Printable Content */}
       <div
         id="printable-content"
+        // ref={componentRef}
         className="max-w-4xl border mt-2 mx-auto p-6 bg-white"
       >
         {/* Header */}

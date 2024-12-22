@@ -6,7 +6,7 @@ const Navbar = () => {
     const navigate = useNavigate();
 
   return (
-    <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-4 shadow-lg">
+    <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 pdf-button p-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="text-white font-semibold text-xl">
