@@ -59,34 +59,31 @@ const AssetHandoverForm = () => {
         </h1>
 
         {/* Employee Info Grid */}
-        <div className="grid grid-cols-2 sm:gap-10 lg:gap-96 mb-6">
-          <div>
-            <p>
-              <span className="font-semibold">Name of Employee:</span>{" "}
-              {data?.employeeName}
-            </p>
-            <p>
-              <span className="font-semibold">Employee Code No:</span>{" "}
-              {data?.employeeCode}
-            </p>
-            <p>
-              <span className="font-semibold">Department:</span>{" "}
-              {data?.department}
-            </p>
-          </div>
-          <div>
-            <p>
-              <span className="font-semibold">Asset Transfer No:</span>{" "}
-              {data?.assetTransferNo}
-            </p>
-            <p>
-              <span className="font-semibold">Handover Date:</span> {data?.date}
-            </p>
-            <p>
-              <span className="font-semibold">Handover By:</span> SHOAIB HAIDER
-            </p>
-          </div>
-        </div>
+        <div className="flex justify-between flex-wrap flex-col sm:flex-row mb-6">
+  <div className="sm:mb-4">
+    <p>
+      <span className="font-semibold">Name of Employee:</span> {data?.employeeName}
+    </p>
+    <p>
+      <span className="font-semibold">Employee Code No:</span> {data?.employeeCode}
+    </p>
+    <p>
+      <span className="font-semibold">Department:</span> {data?.department}
+    </p>
+  </div>
+  <div>
+    <p>
+      <span className="font-semibold">Asset Transfer No:</span> {data?.assetTransferNo}
+    </p>
+    <p>
+      <span className="font-semibold">Handover Date:</span> {data?.date}
+    </p>
+    <p>
+      <span className="font-semibold">Handover By:</span> SHOAIB HAIDER
+    </p>
+  </div>
+</div>
+
 
         {/* Instructions */}
         <p className="mb-6 text-gray-600">
