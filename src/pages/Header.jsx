@@ -19,7 +19,7 @@ const Navbar = () => {
             Home
           </p>
           <p onClick={()=>navigate('/list')} className="text-white hover:text-gray-300 cursor-pointer">
-            Asset Handover List
+            Asset Handovered List
           </p>
         </div>
       </div>
