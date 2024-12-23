@@ -9,17 +9,14 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 pdf-button p-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo Section */}
-        <div className="text-white font-semibold text-xl">
+        <div className="text-white font-semibold text-xl uppercase">
           <p>Astro Industries</p>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 font-semibold">
           <p onClick={()=>navigate('/')} className="text-white hover:text-gray-300 cursor-pointer">
             Home
-          </p>
-          <p onClick={()=>navigate('/form')} className="text-white hover:text-gray-300 cursor-pointer">
-            Asset Handover Form
           </p>
           <p onClick={()=>navigate('/list')} className="text-white hover:text-gray-300 cursor-pointer">
             Asset Handover List

@@ -2,31 +2,28 @@ import { useLocation } from "react-router-dom";
 import html2pdf from "html2pdf.js";
 import logo from "../assets/logo.jpg";
 import Navbar from "./Header";
-// import {useReactToPrint} from "react-to-print";
-// import { useRef } from "react";
+
 
 
 const AssetHandoverForm = () => {
   const location = useLocation();
   const { data } = location.state || {};
 
-//   const componentRef = useRef();
-//   const handlePrint =   useReactToPrint({
-//     content: () => componentRef.current,
-// })
+
 
   const downloadForm = () => {
     const element = document.querySelector("#printable-content");
-    html2pdf(element)
-      .from(element)
+    html2pdf()
       .set({
         margin: 0,
         filename: "asset-handover-form.pdf",
         html2canvas: { scale: 2 },
         jsPDF: { orientation: "portrait" },
       })
+      .from(element) 
       .save();
   };
+  
 
   const printForm = () => {
     window.print();
